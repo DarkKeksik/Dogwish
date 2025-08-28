@@ -1,0 +1,172 @@
+[gd_scene load_steps=9 format=3 uid="uid://dsewdryghphcc"]
+
+[ext_resource type="Script" uid="uid://mksip1xd0lkd" path="res://src/levels/Kitchen/kitchen.gd" id="1_v1gxx"]
+[ext_resource type="PackedScene" uid="uid://b3mi3kjantsbd" path="res://src/levels/Kitchen/Components/Ceiling/Ceiling.tscn" id="2_7bx4s"]
+[ext_resource type="PackedScene" uid="uid://crdyofd4u3dii" path="res://src/levels/Kitchen/Components/Floor/Floor.tscn" id="2_uqo8l"]
+[ext_resource type="PackedScene" uid="uid://cyqulit6fe2on" path="res://src/levels/Kitchen/Components/Walls/Wall_brick.tscn" id="3_7b333"]
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="4_xmpck"]
+[ext_resource type="PackedScene" uid="uid://bhfi88mf7qqlk" path="res://src/scenes/Skirting_board/components/Skirting_board.tscn" id="6_66f2u"]
+[ext_resource type="PackedScene" uid="uid://dku0eqtjbt1ur" path="res://src/scenes/Skirting_board/components/Connector/Connector.tscn" id="7_mldo8"]
+[ext_resource type="PackedScene" uid="uid://2bvnpgmtckbr" path="res://src/scenes/Skirting_board/components/Internal_corner/Internal_corner.tscn" id="8_dt20r"]
+
+[node name="Kitchen" type="Node"]
+script = ExtResource("1_v1gxx")
+
+[node name="ProtoController" parent="." instance=ExtResource("4_xmpck")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 3)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-1, 8.74228e-08, -5.96046e-08, -5.96047e-08, -4.37114e-08, 1, 8.74228e-08, 1, 4.37114e-08, 7.15256e-08, 8.8, 3.8466e-07)
+shadow_enabled = true
+
+[node name="Ceiling" parent="." instance=ExtResource("2_7bx4s")]
+transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0.1, 4.37985, -0.219203)
+
+[node name="Floor" parent="." instance=ExtResource("2_uqo8l")]
+
+[node name="Walls" type="Node3D" parent="."]
+
+[node name="WallBrick" parent="Walls" instance=ExtResource("3_7b333")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, 9.3)
+
+[node name="WallBrick2" parent="Walls" instance=ExtResource("3_7b333")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -10.3)
+
+[node name="WallBrick3" parent="Walls" instance=ExtResource("3_7b333")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -9.5, 1, -0.54)
+
+[node name="WallBrick4" parent="Walls" instance=ExtResource("3_7b333")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.3, 1, -0.54)
+
+[node name="SkirtingBoards" type="Node3D" parent="."]
+
+[node name="Side1" type="Node3D" parent="SkirtingBoards"]
+
+[node name="Skirting_board" parent="SkirtingBoards/Side1" instance=ExtResource("6_66f2u")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0532, -0.0652892, -7.66875)
+
+[node name="Connector" parent="SkirtingBoards/Side1" instance=ExtResource("7_mldo8")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0137, 0, -5.5887)
+
+[node name="Skirting_board2" parent="SkirtingBoards/Side1" instance=ExtResource("6_66f2u")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0532, -0.0652892, -3.16875)
+
+[node name="Connector2" parent="SkirtingBoards/Side1" instance=ExtResource("7_mldo8")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0137, 0, -1.07287)
+
+[node name="Skirting_board3" parent="SkirtingBoards/Side1" instance=ExtResource("6_66f2u")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0532, -0.0652892, 1.33125)
+
+[node name="Connector3" parent="SkirtingBoards/Side1" instance=ExtResource("7_mldo8")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0137, 0, 3.45194)
+
+[node name="Skirting_board4" parent="SkirtingBoards/Side1" instance=ExtResource("6_66f2u")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0532, -0.0652892, 5.83125)
+
+[node name="Connector4" parent="SkirtingBoards/Side1" instance=ExtResource("7_mldo8")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0137, 0, 7.93711)
+
+[node name="Skirting_board5" parent="SkirtingBoards/Side1" instance=ExtResource("6_66f2u")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0532, -0.0652892, 7.33125)
+
+[node name="Internal_corner" parent="SkirtingBoards" instance=ExtResource("8_dt20r")]
+transform = Transform3D(-6.55671e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.55671e-08, 10.0064, -0.000193622, 8.99792)
+
+[node name="Side2" type="Node3D" parent="SkirtingBoards"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.613726, 0, -2.68268e-08)
+
+[node name="Skirting_board" parent="SkirtingBoards/Side2" instance=ExtResource("6_66f2u")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0532, -0.0652892, -7.66875)
+
+[node name="Connector" parent="SkirtingBoards/Side2" instance=ExtResource("7_mldo8")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0137, 0, -5.5887)
+
+[node name="Skirting_board2" parent="SkirtingBoards/Side2" instance=ExtResource("6_66f2u")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0532, -0.0652892, -3.16875)
+
+[node name="Connector2" parent="SkirtingBoards/Side2" instance=ExtResource("7_mldo8")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0137, 0, -1.07287)
+
+[node name="Skirting_board3" parent="SkirtingBoards/Side2" instance=ExtResource("6_66f2u")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0532, -0.0652892, 1.33125)
+
+[node name="Connector3" parent="SkirtingBoards/Side2" instance=ExtResource("7_mldo8")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0137, 0, 3.45194)
+
+[node name="Skirting_board4" parent="SkirtingBoards/Side2" instance=ExtResource("6_66f2u")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0532, -0.0652892, 5.83125)
+
+[node name="Connector4" parent="SkirtingBoards/Side2" instance=ExtResource("7_mldo8")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0137, 0, 7.93711)
+
+[node name="Skirting_board5" parent="SkirtingBoards/Side2" instance=ExtResource("6_66f2u")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0532, -0.0652892, 7.33125)
+
+[node name="Internal_corner2" parent="SkirtingBoards" instance=ExtResource("8_dt20r")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0064, -0.000193622, -10.0066)
+
+[node name="Side3" type="Node3D" parent="SkirtingBoards"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, -1.009)
+
+[node name="Skirting_board" parent="SkirtingBoards/Side3" instance=ExtResource("6_66f2u")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0532, -0.0652892, -7.66875)
+
+[node name="Connector" parent="SkirtingBoards/Side3" instance=ExtResource("7_mldo8")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0137, 0, -5.5887)
+
+[node name="Skirting_board2" parent="SkirtingBoards/Side3" instance=ExtResource("6_66f2u")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0532, -0.0652892, -3.16875)
+
+[node name="Connector2" parent="SkirtingBoards/Side3" instance=ExtResource("7_mldo8")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0137, 0, -1.07287)
+
+[node name="Skirting_board3" parent="SkirtingBoards/Side3" instance=ExtResource("6_66f2u")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0532, -0.0652892, 1.33125)
+
+[node name="Connector3" parent="SkirtingBoards/Side3" instance=ExtResource("7_mldo8")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0137, 0, 3.45194)
+
+[node name="Skirting_board4" parent="SkirtingBoards/Side3" instance=ExtResource("6_66f2u")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0532, -0.0652892, 5.83125)
+
+[node name="Connector4" parent="SkirtingBoards/Side3" instance=ExtResource("7_mldo8")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0137, 0, 7.93711)
+
+[node name="Skirting_board5" parent="SkirtingBoards/Side3" instance=ExtResource("6_66f2u")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0532, -0.0652892, 7.33125)
+
+[node name="Internal_corner3" parent="SkirtingBoards" instance=ExtResource("8_dt20r")]
+transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, -9.20324, -0.000193622, -10.0066)
+
+[node name="Side4" type="Node3D" parent="SkirtingBoards"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.804, 0, -0.649143)
+
+[node name="Skirting_board" parent="SkirtingBoards/Side4" instance=ExtResource("6_66f2u")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0532, -0.0652892, -7.66875)
+
+[node name="Connector" parent="SkirtingBoards/Side4" instance=ExtResource("7_mldo8")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0137, 0, -5.5887)
+
+[node name="Skirting_board2" parent="SkirtingBoards/Side4" instance=ExtResource("6_66f2u")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0532, -0.0652892, -3.16875)
+
+[node name="Connector2" parent="SkirtingBoards/Side4" instance=ExtResource("7_mldo8")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0137, 0, -1.07287)
+
+[node name="Skirting_board3" parent="SkirtingBoards/Side4" instance=ExtResource("6_66f2u")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0532, -0.0652892, 1.33125)
+
+[node name="Connector3" parent="SkirtingBoards/Side4" instance=ExtResource("7_mldo8")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0137, 0, 3.45194)
+
+[node name="Skirting_board4" parent="SkirtingBoards/Side4" instance=ExtResource("6_66f2u")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0532, -0.0652892, 5.83125)
+
+[node name="Connector4" parent="SkirtingBoards/Side4" instance=ExtResource("7_mldo8")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0137, 0, 7.93711)
+
+[node name="Skirting_board5" parent="SkirtingBoards/Side4" instance=ExtResource("6_66f2u")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0532, -0.0652892, 7.33125)
+
+[node name="Internal_corner4" parent="SkirtingBoards" instance=ExtResource("8_dt20r")]
+transform = Transform3D(-1.5, 0, -1.31134e-07, 0, 1.5, 0, 1.31134e-07, 0, -1.5, -9.20314, -0.000193622, 8.99825)

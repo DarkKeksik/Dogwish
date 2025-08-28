@@ -1,24 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://1tyck3uvp4n6"]
+[gd_scene load_steps=3 format=3 uid="uid://1tyck3uvp4n6"]
 
 [ext_resource type="Script" uid="uid://cjem8dn1ugf2q" path="res://player.gd" id="1_rwoh2"]
-[ext_resource type="PackedScene" uid="uid://w4nvmt1ef2bo" path="res://assets/models_complited/player.glb" id="2_vy1tf"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_rwoh2"]
-size = Vector3(1.50543, 2.05273, 1)
+[ext_resource type="PackedScene" path="res://addons/proto_controller/proto_controller.tscn" id="2_rwoh2"]
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_rwoh2")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0334239, 1.07758, 0.0323061)
-shape = SubResource("BoxShape3D_rwoh2")
-
-[node name="Pivot" type="Node3D" parent="."]
-
-[node name="Character" parent="Pivot" instance=ExtResource("2_vy1tf")]
-
-[node name="Marker3D" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.06572, -1.11859)
-
-[node name="Camera3D" type="Camera3D" parent="Marker3D"]
-transform = Transform3D(-0.999853, 2.56076e-08, -0.0171383, -0.00866327, 0.862831, 0.505418, 0.0147875, 0.505492, -0.862704, 0, -1.17464, 1.10376)
+[node name="ProtoController" parent="." instance=ExtResource("2_rwoh2")]
