@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://rowxhc1r618e"]
+
+[ext_resource type="PackedScene" uid="uid://dgabgo08voskj" path="res://assets/interior/Lamps/ceiling_light.glb" id="1_xf2f3"]
+
+[node name="SaffitLamp" type="Node3D"]
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_xf2f3")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)

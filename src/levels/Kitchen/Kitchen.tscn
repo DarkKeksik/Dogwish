@@ -1,26 +1,39 @@
-[gd_scene load_steps=9 format=3 uid="uid://dsewdryghphcc"]
+[gd_scene load_steps=11 format=3 uid="uid://dsewdryghphcc"]
 
 [ext_resource type="Script" uid="uid://mksip1xd0lkd" path="res://src/levels/Kitchen/kitchen.gd" id="1_v1gxx"]
 [ext_resource type="PackedScene" uid="uid://b3mi3kjantsbd" path="res://src/levels/Kitchen/Components/Ceiling/Ceiling.tscn" id="2_7bx4s"]
 [ext_resource type="PackedScene" uid="uid://crdyofd4u3dii" path="res://src/levels/Kitchen/Components/Floor/Floor.tscn" id="2_uqo8l"]
 [ext_resource type="PackedScene" uid="uid://cyqulit6fe2on" path="res://src/levels/Kitchen/Components/Walls/Wall_brick.tscn" id="3_7b333"]
+[ext_resource type="PackedScene" uid="uid://rowxhc1r618e" path="res://src/scenes/lights/SaffitLamp/SaffitLamp.tscn" id="4_won46"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="4_xmpck"]
 [ext_resource type="PackedScene" uid="uid://bhfi88mf7qqlk" path="res://src/scenes/Skirting_board/components/Skirting_board.tscn" id="6_66f2u"]
 [ext_resource type="PackedScene" uid="uid://dku0eqtjbt1ur" path="res://src/scenes/Skirting_board/components/Connector/Connector.tscn" id="7_mldo8"]
 [ext_resource type="PackedScene" uid="uid://2bvnpgmtckbr" path="res://src/scenes/Skirting_board/components/Internal_corner/Internal_corner.tscn" id="8_dt20r"]
+[ext_resource type="PackedScene" uid="uid://xlgebw4psogu" path="res://src/scenes/Door/Door.tscn" id="9_iho3o"]
 
 [node name="Kitchen" type="Node"]
 script = ExtResource("1_v1gxx")
 
 [node name="ProtoController" parent="." instance=ExtResource("4_xmpck")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 3)
+transform = Transform3D(-0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, -0.866025, -8, 0, -8)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-1, 8.74228e-08, -5.96046e-08, -5.96047e-08, -4.37114e-08, 1, 8.74228e-08, 1, 4.37114e-08, 7.15256e-08, 8.8, 3.8466e-07)
+transform = Transform3D(-1, 1.0425e-07, -1.80935e-08, -5.96046e-08, -0.41374, 0.910395, 8.74228e-08, 0.910395, 0.41374, -49.0406, 52.4683, 7.1281)
 shadow_enabled = true
 
 [node name="Ceiling" parent="." instance=ExtResource("2_7bx4s")]
 transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0.1, 4.37985, -0.219203)
+
+[node name="CeilingObjects" type="Node3D" parent="."]
+
+[node name="SaffitLamp" parent="CeilingObjects" instance=ExtResource("4_won46")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.99465, 4.395, -9.00257)
+
+[node name="SaffitLamp2" parent="CeilingObjects" instance=ExtResource("4_won46")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.85078, 4.395, -8.21369)
+
+[node name="SaffitLamp3" parent="CeilingObjects" instance=ExtResource("4_won46")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.69138, 4.395, -7.40773)
 
 [node name="Floor" parent="." instance=ExtResource("2_uqo8l")]
 
@@ -37,6 +50,11 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -9.5, 
 
 [node name="WallBrick4" parent="Walls" instance=ExtResource("3_7b333")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.3, 1, -0.54)
+
+[node name="WallsObjects" type="Node3D" parent="."]
+
+[node name="Door" parent="WallsObjects" instance=ExtResource("9_iho3o")]
+transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, 12, -2.36, -0.38)
 
 [node name="SkirtingBoards" type="Node3D" parent="."]
 
@@ -170,3 +188,8 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0532, -0.0652892, 7.
 
 [node name="Internal_corner4" parent="SkirtingBoards" instance=ExtResource("8_dt20r")]
 transform = Transform3D(-1.5, 0, -1.31134e-07, 0, 1.5, 0, 1.31134e-07, 0, -1.5, -9.20314, -0.000193622, 8.99825)
+
+[node name="PartitionsWalls" type="Node3D" parent="."]
+
+[node name="WallBrick" parent="PartitionsWalls" instance=ExtResource("3_7b333")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 5.67711, 0.215474, -8.05966)

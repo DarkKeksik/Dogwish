@@ -15,6 +15,15 @@ height = 0.36
 
 [node name="ProtoController" type="CharacterBody3D"]
 script = ExtResource("1_ucva2")
+can_sprint = true
+base_speed = 5.0
+jump_velocity = 3.5
+sprint_speed = 8.0
+input_left = "left"
+input_right = "right"
+input_forward = "up"
+input_back = "down"
+input_jump = "jump"
 
 [node name="Mesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.183818, 0)
