@@ -53,10 +53,8 @@ shadow_mesh = SubResource("ArrayMesh_1nxic")
 transform = Transform3D(0.829905, -0.557904, 0, 0.557904, 0.829905, 0, 0, 0, 1, 0, 0.166659, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_dmk55")
 
 [node name="Object_11" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_w7n67")
 skeleton = NodePath("")
