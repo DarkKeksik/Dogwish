@@ -318,47 +318,46 @@ shadow_mesh = SubResource("ArrayMesh_cqrfu")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.46986, 2.65306, -2.81492)
 shape = SubResource("BoxShape3D_yxjbn")
 
-[node name="DoorWrap" type="Node3D" parent="CollisionShape3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.46986, -2.65306, 2.81492)
+[node name="DoorWrap" type="Node3D" parent="."]
 
-[node name="glass" type="Node3D" parent="CollisionShape3D/DoorWrap"]
+[node name="glass" type="Node3D" parent="DoorWrap"]
 
-[node name="Object_7" type="MeshInstance3D" parent="CollisionShape3D/DoorWrap/glass"]
+[node name="Object_7" type="MeshInstance3D" parent="DoorWrap/glass"]
 transform = Transform3D(0.001, 0, 0, 0, 0.001, 0, 0, 0, 0.001, 0, 0, 0)
 mesh = SubResource("ArrayMesh_qyfq8")
 skeleton = NodePath("")
 
-[node name="metal" type="Node3D" parent="CollisionShape3D/DoorWrap"]
+[node name="metal" type="Node3D" parent="DoorWrap"]
 transform = Transform3D(0.001, 0, 0, 0, 0.001, 0, 0, 0, 0.001, 0, 0, 0)
 
-[node name="Object_12" type="MeshInstance3D" parent="CollisionShape3D/DoorWrap/metal"]
+[node name="Object_12" type="MeshInstance3D" parent="DoorWrap/metal"]
 mesh = SubResource("ArrayMesh_lg6np")
 skeleton = NodePath("")
 
-[node name="Object_14" type="MeshInstance3D" parent="CollisionShape3D/DoorWrap/metal"]
+[node name="Object_14" type="MeshInstance3D" parent="DoorWrap/metal"]
 mesh = SubResource("ArrayMesh_dgv7y")
 skeleton = NodePath("")
 
-[node name="Object_16" type="MeshInstance3D" parent="CollisionShape3D/DoorWrap/metal"]
+[node name="Object_16" type="MeshInstance3D" parent="DoorWrap/metal"]
 mesh = SubResource("ArrayMesh_y2657")
 skeleton = NodePath("")
 
-[node name="Object_18" type="MeshInstance3D" parent="CollisionShape3D/DoorWrap/metal"]
+[node name="Object_18" type="MeshInstance3D" parent="DoorWrap/metal"]
 mesh = SubResource("ArrayMesh_pcri3")
 skeleton = NodePath("")
 
-[node name="Object_20" type="MeshInstance3D" parent="CollisionShape3D/DoorWrap/metal"]
+[node name="Object_20" type="MeshInstance3D" parent="DoorWrap/metal"]
 mesh = SubResource("ArrayMesh_7w3a4")
 skeleton = NodePath("")
 
-[node name="Object_22" type="MeshInstance3D" parent="CollisionShape3D/DoorWrap/metal"]
+[node name="Object_22" type="MeshInstance3D" parent="DoorWrap/metal"]
 mesh = SubResource("ArrayMesh_3pjjw")
 skeleton = NodePath("")
 
-[node name="Object_24" type="MeshInstance3D" parent="CollisionShape3D/DoorWrap/metal"]
+[node name="Object_24" type="MeshInstance3D" parent="DoorWrap/metal"]
 mesh = SubResource("ArrayMesh_p6mym")
 skeleton = NodePath("")
 
-[node name="Object_26" type="MeshInstance3D" parent="CollisionShape3D/DoorWrap/metal"]
+[node name="Object_26" type="MeshInstance3D" parent="DoorWrap/metal"]
 mesh = SubResource("ArrayMesh_7t6vq")
 skeleton = NodePath("")

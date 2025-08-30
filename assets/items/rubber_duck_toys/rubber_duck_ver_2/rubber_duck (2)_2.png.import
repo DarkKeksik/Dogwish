@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dinc7mxbnb4u3"
+path.s3tc="res://.godot/imported/rubber_duck (2)_2.png-19c511e67ccd3a3785e8cb12510e1738.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "6599df7e94415bc8a2cef20633436d6e"
+}
+
+[deps]
+
+source_file="res://assets/items/rubber_duck_toys/rubber_duck_ver_2/rubber_duck (2)_2.png"
+dest_files=["res://.godot/imported/rubber_duck (2)_2.png-19c511e67ccd3a3785e8cb12510e1738.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://assets/items/rubber_duck_toys/rubber_duck_ver_2/rubber_duck (2)_2.png"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

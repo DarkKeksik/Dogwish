@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://3lcogxyjswrf"]
+
+[ext_resource type="PackedScene" uid="uid://b1bppb3oocfwf" path="res://assets/items/book_open/open_book.glb" id="1_qstkx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qstkx"]
+size = Vector3(0.675949, 0.139526, 0.573212)
+
+[node name="Open_book" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00539398, 0.0545044, 0.00920105)
+shape = SubResource("BoxShape3D_qstkx")
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_qstkx")]
+
+[node name="4a8764d04ff84465aa41f352dcf0afdd_obj_cleaner_materialmerger_gles" parent="Sketchfab_Scene/Sketchfab_model" index="0"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+
+[editable path="Sketchfab_Scene"]

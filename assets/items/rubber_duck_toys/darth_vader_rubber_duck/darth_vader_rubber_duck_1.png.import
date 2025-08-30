@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dwvumdbue5je"
+path.s3tc="res://.godot/imported/darth_vader_rubber_duck_1.png-0faa5560cea3af10ce4131d145a5d4c2.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "f517526e9ed0e9f05222e9aa91a844ab"
+}
+
+[deps]
+
+source_file="res://assets/items/rubber_duck_toys/darth_vader_rubber_duck/darth_vader_rubber_duck_1.png"
+dest_files=["res://.godot/imported/darth_vader_rubber_duck_1.png-0faa5560cea3af10ce4131d145a5d4c2.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

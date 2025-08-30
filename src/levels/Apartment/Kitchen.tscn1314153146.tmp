@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://dsewdryghphcc"]
+
+[ext_resource type="Script" uid="uid://mksip1xd0lkd" path="res://src/levels/Kitchen/kitchen.gd" id="1_v1gxx"]
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="2_uqo8l"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_f1egf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xrwns"]
+size = Vector3(20, 1, 20)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_xrwns"]
+size = Vector2(20, 20)
+
+[node name="Kitchen" type="Node"]
+script = ExtResource("1_v1gxx")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866024, -0.499464, -0.0232233, 1.49012e-08, -0.0464464, 0.998921, -0.500003, 0.865089, 0.0402236, -0.603806, 25.9719, 1.04581)
+shadow_enabled = true
+
+[node name="Floor" type="StaticBody3D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_f1egf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, -0.5)
+shape = SubResource("BoxShape3D_xrwns")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor/CollisionShape3D"]
+mesh = SubResource("PlaneMesh_xrwns")
+skeleton = NodePath("../..")
+
+[node name="ProtoController" parent="." instance=ExtResource("2_uqo8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, -6)
