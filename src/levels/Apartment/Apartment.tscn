@@ -110,6 +110,9 @@ transform = Transform3D(-0.230538, 0.885985, -0.402347, 0.183085, 0.445595, 0.87
 
 [node name="SkirtingBoards" type="Node3D" parent="."]
 
+[node name="Internal_corner7" parent="SkirtingBoards" instance=ExtResource("8_dt20r")]
+transform = Transform3D(-0.0760049, -0.0332146, 0.855565, -0.0920075, 1.68283, 0.0311675, -0.661834, -0.102812, -0.132861, -9.21001, -0.00462231, 0.979433)
+
 [node name="Side1" type="Node3D" parent="SkirtingBoards"]
 
 [node name="Skirting_board" parent="SkirtingBoards/Side1" instance=ExtResource("6_66f2u")]
@@ -218,7 +221,7 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0532, -0.0652892, -7
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0137, 0, -5.5887)
 
 [node name="Skirting_board2" parent="SkirtingBoards/Side4" instance=ExtResource("6_66f2u")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0532, -0.0652892, -3.16875)
+transform = Transform3D(1.5, 0, 1.42109e-14, 0, 1.5, 0, 0, 0, 1.52791, 10.0532, -0.0652892, -3.16875)
 
 [node name="Connector2" parent="SkirtingBoards/Side4" instance=ExtResource("7_mldo8")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0137, 0, -1.07287)
@@ -240,6 +243,81 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0532, -0.0652892, 7.
 
 [node name="Internal_corner4" parent="SkirtingBoards" instance=ExtResource("8_dt20r")]
 transform = Transform3D(-1.5, 0, -1.31134e-07, 0, 1.5, 0, 1.31134e-07, 0, -1.5, -9.20314, -0.000193622, 8.99825)
+
+[node name="Side5" type="Node3D" parent="SkirtingBoards"]
+transform = Transform3D(-3.44425e-08, 0, 0.682755, 0, 1.16028, 0, -0.787953, 0, -2.98442e-08, -2.272, 0, 8.87)
+
+[node name="Skirting_board" parent="SkirtingBoards/Side5" instance=ExtResource("6_66f2u")]
+transform = Transform3D(1.439, 0, 1.42109e-14, 0, 1.439, 0, -2.84217e-14, 0, 1.64049, 10.0532, -0.0652892, -7.66875)
+
+[node name="Connector" parent="SkirtingBoards/Side5" instance=ExtResource("7_mldo8")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0137, 0, -5.5887)
+
+[node name="Skirting_board2" parent="SkirtingBoards/Side5" instance=ExtResource("6_66f2u")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0532, -0.0652892, -3.16875)
+
+[node name="Connector2" parent="SkirtingBoards/Side5" instance=ExtResource("7_mldo8")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0137, 0, -1.07287)
+
+[node name="Skirting_board3" parent="SkirtingBoards/Side5" instance=ExtResource("6_66f2u")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0532, -0.0652892, 1.33125)
+
+[node name="Connector3" parent="SkirtingBoards/Side5" instance=ExtResource("7_mldo8")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0137, 0, 3.45194)
+
+[node name="Skirting_board4" parent="SkirtingBoards/Side5" instance=ExtResource("6_66f2u")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0532, -0.0652892, 5.83125)
+
+[node name="Connector4" parent="SkirtingBoards/Side5" instance=ExtResource("7_mldo8")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0137, 0, 7.93711)
+
+[node name="Skirting_board6" parent="SkirtingBoards/Side5" instance=ExtResource("6_66f2u")]
+transform = Transform3D(1.5, 0, 1.1724e-13, 0, 1.31758, 0, -2.41585e-13, 0, 0.912561, 10.0555, -0.0573631, 17.2595)
+
+[node name="Skirting_board7" parent="SkirtingBoards/Side5" instance=ExtResource("6_66f2u")]
+transform = Transform3D(-9.83508e-08, 0, 0.214249, 0, 1.63894, 0, -2.25, 0, -9.36515e-09, 10.3916, -0.082919, 13.7548)
+
+[node name="Skirting_board5" parent="SkirtingBoards/Side5" instance=ExtResource("6_66f2u")]
+transform = Transform3D(1.499, 0, 2.20695e-14, 0, 1.499, 0, -7.10069e-15, 0, 4.659, 10.0532, -0.0652892, 7.33125)
+
+[node name="Internal_corner5" parent="SkirtingBoards" instance=ExtResource("8_dt20r")]
+transform = Transform3D(1.5, 0, 2.62268e-07, 0, 1.5, 0, -2.62268e-07, 0, 1.5, 10.0048, 0.000736848, 0.991904)
+
+[node name="Side6" type="Node3D" parent="SkirtingBoards"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1.20358, 0, 1, 0, -4.37114e-08, 0, 0, -9.5969)
+
+[node name="Skirting_board" parent="SkirtingBoards/Side6" instance=ExtResource("6_66f2u")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 0.67256, 10.0532, -0.0652892, -6.04273)
+
+[node name="Connector" parent="SkirtingBoards/Side6" instance=ExtResource("7_mldo8")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0137, 0, -5.5887)
+
+[node name="Skirting_board2" parent="SkirtingBoards/Side6" instance=ExtResource("6_66f2u")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0532, -0.0652892, -3.16875)
+
+[node name="Connector2" parent="SkirtingBoards/Side6" instance=ExtResource("7_mldo8")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0137, 0, -1.07287)
+
+[node name="Skirting_board3" parent="SkirtingBoards/Side6" instance=ExtResource("6_66f2u")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0532, -0.0652892, 1.33125)
+
+[node name="Connector3" parent="SkirtingBoards/Side6" instance=ExtResource("7_mldo8")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0137, 0, 3.45194)
+
+[node name="Skirting_board4" parent="SkirtingBoards/Side6" instance=ExtResource("6_66f2u")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0532, -0.0652892, 5.83125)
+
+[node name="Connector4" parent="SkirtingBoards/Side6" instance=ExtResource("7_mldo8")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0137, 0, 7.93711)
+
+[node name="Skirting_board5" parent="SkirtingBoards/Side6" instance=ExtResource("6_66f2u")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.0532, -0.0652892, 7.33125)
+
+[node name="Skirting_board6" parent="SkirtingBoards/Side6" instance=ExtResource("6_66f2u")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 0.54302, 10.0532, -0.0652892, -9.27981)
+
+[node name="Skirting_board7" parent="SkirtingBoards/Side6" instance=ExtResource("6_66f2u")]
+transform = Transform3D(-6.55669e-08, 0, 0.168046, 0, 1.243, 0, -1.5, 0, -7.34552e-09, 10.3196, -0.0496647, -8.51484)
 
 [node name="PartitionsWalls" type="Node3D" parent="."]
 
